@@ -40,9 +40,9 @@ var BaseScreen = {
     AppData.data[type] = data;
     this.update();
     this.calculate();
-    document.getElementById(`${type}Submit`).click();
-    $('.number-input').val('');
+    resetVal();
     $('.field-label.green').html('$' + Utils.formatMoney(AppData.sum, 0, '.', ','));
+    document.getElementById(`${type}Submit`).click();
   },
 
   calculate: function () {
