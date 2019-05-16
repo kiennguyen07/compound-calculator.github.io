@@ -10,7 +10,6 @@ var Config = {
 }
 var AppData = {};
 
-
 function _show(type) {
   $('[data-w-id="c4edf300-4311-c06f-9d48-f06a6ace4bc4"]').hide();
   $(`#${type}-page`).css('opacity',1).css('display', 'flex');
