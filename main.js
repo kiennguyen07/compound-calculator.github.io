@@ -31,7 +31,7 @@ var BaseScreen = {
 
   submit: function(type) {
     var data = {
-      value: $(`[data-key="${type}"]`).val(),
+      value: parseFloat($(`[data-key="${type}"]`).val()),
       timing: $(`[data-key="${type}-timing"]`).val(),
     }
     if (isNaN(data.value) || data.timing === '') {
@@ -39,8 +39,27 @@ var BaseScreen = {
     }
     AppData.data[type] = data;
     this.update();
+    this.calculate();
     document.getElementById(`${type}Submit`).click();
     $('.number-input').val('');
+    $('.field-label.green').html('$' + Utils.formatMoney(AppData.sum, 0, '.', ','));
+  },
+
+  calculate: function () {
+    AppData.sum = 0;
+    _.forOwn(AppData.data, function(item, key) {
+      switch(item.timing) {
+        case 'day':
+          AppData.sum += item.value * 365/12;
+          break;
+        case 'week':
+          AppData.sum += item.value * 52/12;
+          break;
+        case 'month':
+          AppData.sum += item.value;
+          break;
+      }
+    })
   },
 
   update: function() {
