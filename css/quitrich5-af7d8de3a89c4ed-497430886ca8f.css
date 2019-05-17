@@ -2754,3 +2754,7 @@ a {
   grid-row-end: 3;
 }
 
+.lity {
+  z-index: 60000 !important;
+  background: rgba(0,0,0,0.6);
+}

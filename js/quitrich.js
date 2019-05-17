@@ -28024,7 +28024,7 @@ Webflow.require('ix2').init(
                 "id": "a-177-n-17",
                 "actionTypeId": "STYLE_OPACITY",
                 "config": {
-                  "delay": 3000,
+                  "delay": 1500,
                   "easing": "easeInOut",
                   "duration": 300,
                   "target": {

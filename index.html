@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-
 <!--  Last Published: Mon Apr 29 2019 19:22:41 GMT+0000 (UTC)  -->
 <html data-wf-page="5cc429c3dca8012c9a0303f5" data-wf-site="5cc429c3dca80173790303f3">
 
 <head>
   <meta charset="utf-8">
-  <title>Copy of quit Rich beta v2</title>
+  <title>Quit Rich beta v2</title>
   <meta content="width=device-width, initial-scale=1" name="viewport">
+  <link href="js/lib/lity/lity.min.css" rel="stylesheet" type="text/css">
   <link href="css/normalize.css" rel="stylesheet" type="text/css">
   <link href="css/components.css" rel="stylesheet" type="text/css">
   <link href="css/quitrich5-af7d8de3a89c4ed-497430886ca8f.css" rel="stylesheet" type="text/css">
@@ -18,19 +18,26 @@
 </head>
 
 <body>
-  <div data-w-id="30b7cd29-3ec9-3422-b116-21189349ff57" style="display:flex" class="preloader">
+  <!-- <div data-w-id="30b7cd29-3ec9-3422-b116-21189349ff57" style="display:flex" class="preloader">
     <img src="images/quit-rich-season-one-logo.gif" alt="" class="gifloader">
     <h2 data-w-id="f928c10a-a7c1-5946-ba36-1aafe752f5fc" class="whitetext">Loading</h2>
-  </div>
+  </div> -->
   <div data-w-id="bd186174-475d-0092-16d7-2296abf4ec3a" class="popups">
     <div class="question popup1">
       <div class="div-block-7 horizontal">
-        <h3>📱 Main menu</h3><a href="#" class="button margin w-button" onclick="BaseScreen.reset()"">Reset the Calculator</a><a href="#"
-          class="button margin w-button">Become an Artist Collaborator</a><a href="#"
-          class="button margin w-button">View Basic Habit Calculator</a><a href="#" class="button margin w-button">View
-          Compound Interest Calculator</a><a href="#" class="button margin w-button">Support our efforts</a><a href="#"
-          class="button margin w-button">Exit to Quit Rich</a><a href="#" class="button margin w-button">Exit to QR
-          Clothing Brand Store</a><a data-w-id="1cbf6dbe-2fbb-a9c6-294b-1c6de51678fe" href="#"
+        <h3>📱 Main menu</h3><a href="#" class="button margin w-button" onclick="BaseScreen.reset()">Reset the Calculator</a>
+        <a href="#" lity-click="https://www.techinasia.com/video-content-marketing"
+          class="button margin w-button">Become an Artist Collaborator</a>
+        <a href="#"
+          class="button margin w-button">View Basic Habit Calculator</a>
+        <a href="#" class="button margin w-button" lity-click="https://www.techinasia.com/video-content-marketing">View
+          Compound Interest Calculator</a>
+        <a href="#" class="button margin w-button" lity-click="https://www.techinasia.com/video-content-marketing">Support our efforts</a>
+        <a href="#"
+          class="button margin w-button">Exit to Quit Rich</a>
+        <a href="#" class="button margin w-button">Exit to QR
+          Clothing Brand Store</a>
+        <a data-w-id="1cbf6dbe-2fbb-a9c6-294b-1c6de51678fe" href="#"
           class="button margin white w-button">Return</a>
       </div>
     </div>
@@ -38,11 +45,13 @@
   <div data-w-id="e8e030ce-8298-f0c8-f11a-92f71d2bae56" class="popups _2">
     <div class="question help">
       <div class="div-block-7 horizontal">
-        <h3>⛑ Help Menu</h3><a href="#" class="button margin w-button">How do we come up with these figures?</a><a
-          href="#" class="button margin w-button">Learn more about compound interest</a><a href="#"
-          class="button margin w-button">What is Quit Rich?</a><a href="#" class="button margin w-button">View the
-          Credits</a><a href="#" class="button margin w-button">Report a problem</a><a
-          data-w-id="9144efd6-aa91-7a38-6225-6a5508912036" href="#" class="button margin white w-button">Return</a>
+        <h3>⛑ Help Menu</h3>
+        <a href="#" class="button margin w-button" lity-click="https://wego.here.com">How do we come up with these figures?</a>
+        <a href="#" class="button margin w-button" lity-click="https://bbc.co.uk/">Learn more about compound interest</a>
+        <a href="#" class="button margin w-button" lity-click="http://nytimes.com/">What is Quit Rich?</a>
+        <a href="#" class="button margin w-button" lity-click="http://google.com">View the Credits</a>
+        <a href="#" class="button margin w-button" lity-click="https://quitrich.com">Report a problem</a>
+        <a data-w-id="9144efd6-aa91-7a38-6225-6a5508912036" href="#" class="button margin white w-button">Return</a>
       </div>
     </div>
   </div>
@@ -257,7 +266,7 @@
             <label class="field-label">
               <strong>per</strong>
             </label>
-            <select data-key="medical-timing" name="field-3" data-name="Field 3" class="text-field _2 w-select">
+            <select data-key="medical-timing" name="field-3" data-name="Field 3" class="text-field _2 w-select timing-select">
               <option value=-1>Select one...</option>
               <option value="day">Day</option>
               <option value="week">Week</option>
@@ -401,7 +410,7 @@
               <strong>per</strong>
             </label>
             <select data-key='nicotin-timing' id="field-3" name="field-3" data-name="Field 3"
-              class="text-field _2 w-select">
+              class="text-field _2 w-select timing-select">
               <option value="">Select one...</option>
               <option value="day">Day</option>
               <option value="week">Week</option>
@@ -537,7 +546,7 @@
               <strong>per</strong>
             </label>
             <select data-key='caffeine-timing' id="field-3" name="field-3" data-name="Field 3"
-              class="text-field _2 w-select">
+              class="text-field _2 w-select timing-select">
               <option value="">Select one...</option>
               <option value="day">Day</option>
               <option value="week">Week</option>
@@ -676,7 +685,7 @@
         <div id="w-node-6acf61a5aa88-9a0303f5" class="w-form">
           <form id="email-form-2" name="email-form-2" data-name="Email Form 2" class="form">
             <label class="field-label"><strong>per</strong></label>
-            <select data-key='alcohol-timing' id="field-3" name="field-3" data-name="Field 3" class="text-field _2 w-select">
+            <select data-key='alcohol-timing' id="field-3" name="field-3" data-name="Field 3" class="text-field _2 w-select timing-select">
               <option value="">Select one...</option>
               <option value="day">Day</option>
               <option value="week">Week</option>
@@ -814,7 +823,7 @@
         <div id="w-node-77284120b4ad-9a0303f5" class="w-form">
           <form id="email-form-2" name="email-form-2" data-name="Email Form 2" class="form">
             <label class="field-label"><strong>per</strong></label>
-            <select data-key='gaming-timing' id="field-3" name="field-3" data-name="Field 3" class="text-field _2 w-select">
+            <select data-key='gaming-timing' id="field-3" name="field-3" data-name="Field 3" class="text-field _2 w-select timing-select">
               <option value="">Select one...</option>
               <option value="day">Day</option>
               <option value="week">Week</option>
@@ -961,7 +970,7 @@
         <div id="w-node-97c62f310533-9a0303f5" class="w-form">
           <form id="email-form-2" name="email-form-2" data-name="Email Form 2" class="form"><label
               class="field-label"><strong>per</strong></label><select data-key='gambling-timing' id="field-3" name="field-3" data-name="Field 3"
-              class="text-field _2 w-select">
+              class="text-field _2 w-select timing-select">
               <option value="">Select one...</option>
               <option value="day">Day</option>
               <option value="week">Week</option>
@@ -1090,7 +1099,7 @@
         <div id="w-node-734b0dc34495-9a0303f5" class="w-form">
           <form id="email-form-2" name="email-form-2" data-name="Email Form 2" class="form"><label
               class="field-label"><strong>per</strong></label><select data-key='eat-timing' id="field-3" name="field-3" data-name="Field 3"
-              class="text-field _2 w-select">
+              class="text-field _2 w-select timing-select">
               <option value="">Select one...</option>
               <option value="day">Day</option>
               <option value="week">Week</option>
@@ -1221,7 +1230,7 @@
         <div id="w-node-16355e1f2e84-9a0303f5" class="w-form">
           <form id="email-form-2" name="email-form-2" data-name="Email Form 2" class="form"><label
               class="field-label"><strong>per</strong></label><select data-key='other-timing' id="field-3" name="field-3" data-name="Field 3"
-              class="text-field _2 w-select">
+              class="text-field _2 w-select timing-select">
               <option value="">Select one...</option>
               <option value="day">Day</option>
               <option value="week">Week</option>
@@ -1434,7 +1443,7 @@
           <div id="w-node-267366815720-9a0303f5" class="w-form">
             <form id="email-form-2" name="email-form-2" data-name="Email Form 2" class="form"><label
                 class="field-label"><strong>per</strong></label><select id="field-3" name="field-3" data-name="Field 3"
-                class="text-field _2 w-select">
+                class="text-field _2 w-select timing-select">
                 <option value="">Select one...</option>
                 <option value="day">Day</option>
                 <option value="week">Week</option>
@@ -1500,12 +1509,19 @@
     <div class="popups">
       <div class="question popup1">
         <div class="div-block-7 horizontal">
-          <h3>📱 Main menu</h3><a href="#" class="button margin w-button" onclick="BaseScreen.reset()">Reset the Calculator</a><a href="#"
-            class="button margin w-button">Become an Artist Collaborator</a><a href="#"
-            class="button margin w-button">View Basic Habit Calculator</a><a href="#"
-            class="button margin w-button">View Compound Interest Calculator</a><a href="#"
-            class="button margin w-button">Support our efforts</a><a href="#" class="button margin w-button">Exit to
-            Quit Rich</a><a href="#" class="button margin w-button">Exit to QR Clothing Brand Store</a><a
+          <h3>📱 Main menu</h3>
+          <a href="#" class="button margin w-button" onclick="BaseScreen.reset()">Reset the Calculator</a>
+          <a href="#" lity-click="https://www.techinasia.com/video-content-marketing"
+            class="button margin w-button">Become an Artist Collaborator</a>
+          <a href="#"
+            class="button margin w-button">View Basic Habit Calculator</a>
+          <a href="#" lity-click="https://www.techinasia.com/video-content-marketing"
+            class="button margin w-button" lity-click="">View Compound Interest Calculator</a>
+          <a href="#" lity-click="https://www.techinasia.com/video-content-marketing"
+            class="button margin w-button" lity-click="">Support our efforts</a>
+          <a href="#" class="button margin w-button">Exit to
+            Quit Rich</a><a href="#" class="button margin w-button">Exit to QR Clothing Brand Store</a>
+          <a
             data-w-id="a73ec6aa-6f57-110e-a5d5-f7de43242575" href="#" class="button margin white w-button">Return</a>
         </div>
       </div>
@@ -1534,9 +1550,13 @@
       <div class="wallpaper otherhabits"></div>
     </div>
   </div>
+  <div id='popup'>
+    <div class=''
+  </div>
+
   <script src="https://d1tdp7z6w94jbb.cloudfront.net/js/jquery-3.3.1.min.js" type="text/javascript"
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-  <script src="js/quitrich5-af7d8de3a89c4ed-497430886ca8f.js" type="text/javascript"></script>
+  <script src="js/quitrich.js" type="text/javascript"></script>
   <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
   <script>
     $('a.button').click(function (e) {
@@ -1691,6 +1711,7 @@
       $(this).val(addComma(val_final));
       i++;
       $(".amount").html(" " + $(this).val());
+      BaseScreen.calculate($(this).attr('data-key'));
     });
     $(".ui-input-text .ui-input-clear").on("click", function () {
       resetVal();
@@ -1701,7 +1722,9 @@
       document.getElementById('submitAge').click();
     }
   </script>
+  
   <script type="text/javascript" src="./js/lib/lodash.min.js"></script>
+  <script type="text/javascript" src="./js/lib/lity/lity.min.js"></script>
   <script type="text/javascript" src="./js/ci.js"></script>
   <script type="text/javascript" src="./main.js"></script>
 </body>

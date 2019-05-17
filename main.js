@@ -1,26 +1,33 @@
 var Config = {
   age: {
     min: 10,
-    max: 60,
+    max: 66,
     default: 67
   },
   rate: {
     default: 8
+  },
+  currency: {
+    dot: 2,
   }
 }
 var AppData = {};
+
 
 function _show(type) {
   $('[data-w-id="c4edf300-4311-c06f-9d48-f06a6ace4bc4"]').hide();
   $(`#${type}-page`).css('opacity',1).css('display', 'flex');
   $(`#${type}-page > *:first-child`).css('opacity',1).css('display', 'flex');
 }
+
 var BaseScreen = {
   init: function () {
     AppData = {
       age: 0,
       data: {},
     }
+    this.initMenu();
+    this.watch();
   },
   
   reset: function () {
@@ -29,8 +36,19 @@ var BaseScreen = {
   },
 
   submit: function(type) {
+    this.calculate(type);
+    resetVal();
+    document.getElementById(`${type}Submit`).click();
+  },
+
+  calculate: function (type) {
+    var val = $(`[data-key="${type}"]`).val();
+    if (!val) {
+      return;
+    }
+    val = val.replace(',', '');
     var data = {
-      value: parseFloat($(`[data-key="${type}"]`).val()),
+      value: parseFloat(val),
       timing: $(`[data-key="${type}-timing"]`).val(),
     }
     if (isNaN(data.value) || data.timing === '') {
@@ -38,27 +56,7 @@ var BaseScreen = {
     }
     AppData.data[type] = data;
     this.update();
-    this.calculate();
-    resetVal();
-    $('.field-label.green').html('$' + Utils.formatMoney(AppData.sum, 0, '.', ','));
-    document.getElementById(`${type}Submit`).click();
-  },
-
-  calculate: function () {
-    AppData.sum = 0;
-    _.forOwn(AppData.data, function(item, key) {
-      switch(item.timing) {
-        case 'day':
-          AppData.sum += item.value * 365/12;
-          break;
-        case 'week':
-          AppData.sum += item.value * 52/12;
-          break;
-        case 'month':
-          AppData.sum += item.value;
-          break;
-      }
-    })
+    $('.field-label.green').html('$' + Utils.formatMoney(AppData.total, Config.currency.dot, '.', ','));
   },
 
   update: function() {
@@ -76,10 +74,28 @@ var BaseScreen = {
     _.forOwn(AppData.data, function(item, key) {
       $(`#${key}-result`).css('display', 'flex');
       $(`#${key}-result .year`).html(Config.age.default - AppData.age);
-      $(`#${key}-result .money`).html('$' + Utils.formatMoney(item.amount.FV, 0, '.', ','));
+      $(`#${key}-result .money`).html('$' + Utils.formatMoney(item.amount.FV, Config.currency.dot, '.', ','));
     })
     $('#final .year').html(Config.age.default - AppData.age);
-    $('#final .money').html('$' + Utils.formatMoney(AppData.total, 0, '.', ','));
+    $('#final .money').html('$' + Utils.formatMoney(AppData.total, Config.currency.dot, '.', ','));
+  },
+
+  watch: function() {
+    var _self = this;
+    $('.timing-select').on('change', function (e, v) {
+      var key = $(this).attr('data-key');
+      if (!key || key === '') {
+        return;
+      }
+      key = key.replace('-timing', '');
+      _self.calculate(key);
+    })
+  },
+
+  initMenu: function() {
+    $('[lity-click]').on('click', function() {
+      lity($(this).attr('lity-click'));
+    });
   }
 }
 
