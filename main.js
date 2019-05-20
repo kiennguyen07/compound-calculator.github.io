@@ -36,9 +36,10 @@ var BaseScreen = {
   },
 
   submit: function(type) {
-    this.calculate(type);
-    resetVal();
-    document.getElementById(`${type}Submit`).click();
+    if(this.calculate(type)){
+      resetVal();
+      document.getElementById(`${type}Submit`).click();
+    }
   },
 
   calculate: function (type) {
@@ -57,6 +58,7 @@ var BaseScreen = {
     AppData.data[type] = data;
     this.update();
     $('.field-label.green').html('$' + Utils.formatMoney(AppData.total, Config.currency.dot, '.', ','));
+    return true;
   },
 
   update: function() {
