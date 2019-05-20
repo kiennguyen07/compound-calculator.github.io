@@ -27,7 +27,7 @@ var BaseScreen = {
       data: {},
     }
     this.initMenu();
-    this.watch();
+    // this.watch();
   },
   
   reset: function () {
@@ -80,17 +80,17 @@ var BaseScreen = {
     $('#final .money').html('$' + Utils.formatMoney(AppData.total, Config.currency.dot, '.', ','));
   },
 
-  watch: function() {
-    var _self = this;
-    $('.timing-select').on('change', function (e, v) {
-      var key = $(this).attr('data-key');
-      if (!key || key === '') {
-        return;
-      }
-      key = key.replace('-timing', '');
-      _self.calculate(key);
-    })
-  },
+  // watch: function() {
+  //   var _self = this;
+  //   $('.timing-select').on('change', function (e, v) {
+  //     var key = $(this).attr('data-key');
+  //     if (!key || key === '') {
+  //       return;
+  //     }
+  //     key = key.replace('-timing', '');
+  //     _self.calculate(key);
+  //   })
+  // },
 
   initMenu: function() {
     $('[lity-click]').on('click', function() {
