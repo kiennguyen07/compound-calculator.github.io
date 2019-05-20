@@ -53,6 +53,12 @@ var BaseScreen = {
       timing: $(`[data-key="${type}-timing"]`).val(),
     }
     if (isNaN(data.value) || data.timing === '') {
+      if (isNaN(data.value) && AppData.data[type]) {
+        delete AppData.data[type].value;
+      }
+      if (data.timing === '' && AppData.data[type]) {
+        delete AppData.data[type].timing;
+      }
       return;
     }
     AppData.data[type] = data;
