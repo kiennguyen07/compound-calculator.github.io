@@ -37,13 +37,13 @@ var BaseScreen = {
     data.forEach(function(regex) {
       found = navigator.userAgent.match(regex);
     })
-    if (!found) {
-      this.hide();
+    if (found) {
+      this.show();
     }
   },
 
   hide: function() {
-    $('#browser-check').css('display', 'none');
+    $('#browser-check').css('display', 'block');
   },
 
   reset: function () {
