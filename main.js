@@ -35,8 +35,13 @@ var BaseScreen = {
     var data = [/FBAV/i, /Instagram/i, /Twitter/i]
     var found = false;
     data.forEach(function(regex) {
+      if (found) {
+        return;
+      }
       found = navigator.userAgent.match(regex);
     })
+    alert(navigator.userAgent);
+    alert(found);
     if (found) {
       this.show();
     }
