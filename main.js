@@ -42,7 +42,7 @@ var BaseScreen = {
     }
   },
 
-  hide: function() {
+  show: function() {
     $('#browser-check').css('display', 'block');
   },
 
