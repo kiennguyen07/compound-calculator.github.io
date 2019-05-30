@@ -43,7 +43,7 @@ var BaseScreen = {
   },
 
   show: function() {
-    $('#browser-check').css('display', 'block');
+    $('#browser-check').css('display', 'flex');
   },
 
   reset: function () {
