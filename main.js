@@ -26,10 +26,26 @@ var BaseScreen = {
       age: 0,
       data: {},
     }
+    this.checkBrowser();
     this.initMenu();
     // this.watch();
   },
-  
+
+  checkBrowser: function() {
+    var data = [/FBAV/i, /Instagram/i, /Twitter/i]
+    var found = false;
+    data.forEach(function(regex) {
+      found = navigator.userAgent.match(regex);
+    })
+    if (!found) {
+      this.hide();
+    }
+  },
+
+  hide: function() {
+    $('#browser-check').css('display', 'none');
+  },
+
   reset: function () {
     this.init();
     window.location.reload();
