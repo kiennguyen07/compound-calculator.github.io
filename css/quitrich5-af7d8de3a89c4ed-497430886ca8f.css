@@ -2808,7 +2808,7 @@ a {
 @media (min-width: 320px) and (max-width: 480px) {
   .lity-content {
     width: 90vw;
-    height: 90%;
+    height: calc(90vh - 56px);
     margin: auto;
     overflow: hidden;
   }
@@ -2819,7 +2819,7 @@ a {
 @media (min-width: 481px) and (max-width: 767px) {
   .lity-content {
     width: 90vw;
-    height: 90%;
+    height: calc(90vh - 56px);
     margin: auto;
     overflow: hidden;
   }
@@ -2831,7 +2831,7 @@ a {
 @media (min-width: 768px) and (max-width: 1024px) {
   .lity-content {
     width: 90vw;
-    height: 90%;
+    height: calc(90vh - 56px);
     margin: auto;
     overflow: hidden;
   }
