@@ -40,8 +40,6 @@ var BaseScreen = {
       }
       found = navigator.userAgent.match(regex);
     })
-    alert(navigator.userAgent);
-    alert(found);
     if (found) {
       this.show();
     }
